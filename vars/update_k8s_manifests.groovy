@@ -9,6 +9,7 @@ def call(Map config = [:]) {
     def gitCredentials = config.gitCredentials ?: 'github-credentials'
     def gitUserName = config.gitUserName ?: 'Jenkins CI'
     def gitUserEmail = config.gitUserEmail ?: 'jenkins@example.com'
+    def host = params.host ?: "easyshop.letsdeployit.com"  // дефолтный хост
     
     echo "Updating Kubernetes manifests with image tag: ${imageTag}"
     
